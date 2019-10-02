@@ -1,0 +1,20 @@
+{
+  "name": "api-mashup",
+  "version": "1.0.0",
+  "main": "./src/app.js",
+  "license": "Nope",
+  "scripts": {
+    "start": "npm run watch:scss && browser-sync start --server './src/public' --files 'src/public/css/*.css, src/public/js/*.js' --cors",
+    "watch:scss": "node-sass -o src/public/css src/scss",
+    "scss": "node-sass -o src/public/css src/scss",
+    "autoprefixer": "postcss -u autoprefixer -r src/public/css/*"
+  },
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.3.1",
+    "browser-sync": "^2.26.3",
+    "postcss-cli": "^6.0.1"
+  }
+}
